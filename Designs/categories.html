@@ -21,7 +21,7 @@
     <!-- Start your project here-->
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-default">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#"><strong>Doof!</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -36,8 +36,7 @@
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
-                        <a href="index.html" class="btn nav-link" data-toggle="modal" 
-                        data-target="#modalLoginForm">SignOut<i   class="fa fa-sign-out"></i></a>
+                        <a href="index.html" class="btn nav-link" data-toggle="modal" data-target="#modalLoginForm">SignOut<i   class="fa fa-sign-out"></i></a>
                     </li>
                 </ul>
             </div>
@@ -54,120 +53,151 @@
         <div class="container">
 
 
-              <!-- /Start your project here-->
-        <div class="container">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal"><i class="fa fa-plus mr-1"></i> Add</button>    <!-- row1 stars here -->
-               
-            <!-- Table starts here -->
+            <!-- /Start your project here-->
+            <div class="container">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal"><i class="fa fa-plus mr-1"></i> Add</button>
+                <!-- row1 stars here -->
 
-            
-<div class="card">
-        <div class="card-body">
-    
-            <!-- Grid row -->
-            <div class="row">
-            
-                <!-- Grid column -->
-                <div class="col-md-12 mt-4">
-            
-                    <div class="input-group md-form form-sm form-2 pl-0">
-                        <input class="form-control my-0 py-1 grey-border" type="text" placeholder="Search" aria-label="Search">
-                        <span class="input-group-addon waves-effect grey lighten-3" id="basic-addon1"><a><i class="fa fa-search text-grey" aria-hidden="true"></i></a></span>
+                <!-- Table starts here -->
+
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <!-- Grid row -->
+                        <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-md-12 mt-4">
+
+                                <div class="input-group md-form form-sm form-2 pl-0">
+                                    <input class="form-control my-0 py-1 grey-border" type="text" placeholder="Search" aria-label="Search">
+                                    <span class="input-group-addon waves-effect grey lighten-3" id="basic-addon1"><a><i class="fa fa-search text-grey" aria-hidden="true"></i></a></span>
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                        <!--Table-->
+                        <table class="table table-striped">
+
+                            <!--Table head-->
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Recipe Category</th>
+
+                                </tr>
+                            </thead>
+                            <!--Table head-->
+
+                            <!--Table body-->
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Dessert</td>
+                                    <!-- Indicates a successful or positive action -->
+                                    <td></td>
+                                    <td>
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o mr-1"></i>Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o mr-1"></i>Delete</button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Soup</td>
+                                    <td></td>
+                                    <td>
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o mr-1"></i>Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o mr-1"></i>Delete</button>
+                                        </div>
+                                    </td></td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Beverage</td>
+                                    <td></td>
+                                    <td>
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o mr-1"></i>Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o mr-1"></i>Delete</button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td><a href="recipes.html">Bakery</a></td>
+                                    <td></td>
+                                    <td>
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o mr-1"></i>Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o mr-1"></i>Delete</button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Appetizer</td>
+                                    <td></td>
+                                    <td>
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o mr-1"></i>Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o mr-1"></i>Delete</button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Snacks</td>
+                                    <td></td>
+                                    <td>
+                                        <div class="btn-group pull-right">
+                                            <button type="button" class="btn btn-warning btn-sm"><i class="fa fa-pencil-square-o mr-1"></i>Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o mr-1"></i>Delete</button>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                            <!--Table body-->
+                        </table>
+                        <!--Table-->
+
                     </div>
-            
                 </div>
-                <!-- Grid column -->
-            
+
+                <!-- Table ends here -->
+
+
+
+
+
+
+
             </div>
-            <!-- Grid row -->
-    
-            <!--Table-->
-            <table class="table table-striped">
-    
-                <!--Table head-->
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Recipe Category</th>
-                        
-                    </tr>
-                </thead>
-                <!--Table head-->
-    
-                <!--Table body-->
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Dessert</td>
-                        <!-- Indicates a successful or positive action -->
-<td><button type="button" class="btn btn-success">Edit</button></td>
-<td><button type="button" class="btn btn-danger">Delete</button></td>
-                       
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Soup</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
-                       
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Beverage</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
-                       
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td><a href = "recipes.html">Bakery</a></td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
-                       
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Appetizer</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
-                       
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>Snacks</td>
-                        <td><button type="button" class="btn btn-success">Edit</button></td>
-                        <td><button type="button" class="btn btn-danger">Delete</button></td>
-                      
-                    </tr>
-                </tbody>
-                <!--Table body-->
-            </table>
-            <!--Table-->
-    
-        </div>
-    </div>
-                    
-            <!-- Table ends here -->
-
-
-
-
-
-
-
-        </div>
 
     </main>
 
     <footer>
 
         <!--Footer-->
-        <footer class="page-footer blue center-on-small-only">
+        <footer class="page-footer dark center-on-small-only bg-dark">
 
 
 
             <!--Copyright-->
-            <div class="footer-copyright">
+            <div class="footer-copyright bg-dark">
                 <div class="container-fluid">
                     © 2017 Copyright: <a href="https://www.doofapp.com"> doof.com </a>
 
@@ -193,49 +223,45 @@
 </body>
 <!-- Modal -->
 <div class="modal fade" id="recipeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Recipe</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Recipe Category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
+            </div>
+            <div class="modal-body">
+
+                <!-- Form register -->
+                <form>
+
+
+                    <div class="md-form">
+
+                        <input type="text" id="orangeForm-name" class="form-control">
+                        <label for="orangeForm-name">Category Name</label>
+                    </div>
                     
-<!-- Form register -->
-<form>
-       
-    
-        <div class="md-form">
-            
-            <input type="text" id="orangeForm-name" class="form-control">
-            <label for="orangeForm-name">Recipe Name</label>
-        </div>
-        <!--Basic textarea-->
-       <div class="md-form">
-        <textarea type="text" id="form7" class="md-textarea"></textarea>
-        <label for="form7">Name</label>
-    </div>
-    
-        
-    
-    
-    
-    </form>
-    <!-- Form register -->
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
+
+
+
+
+
+                </form>
+                <!-- Form register -->
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
             </div>
         </div>
     </div>
+</div>
 
 
-    
+
 
 
 <!-- Sign in modal ends here -->
