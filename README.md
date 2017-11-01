@@ -6,6 +6,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/Sebuliba-Adrian/DOOF/badge.svg?branch=master)](https://coveralls.io/github/Sebuliba-Adrian/DOOF?branch=master)
 [![Codeship](https://img.shields.io/codeship/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1/master.svg)](https://app.codeship.com/projects/254113)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b0b362f1d90445cebc53ae7b1cd935e1)](https://www.codacy.com/app/Sebuliba-Adrian/DOOF?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Sebuliba-Adrian/DOOF&amp;utm_campaign=Badge_Grade)
 
 # DOOF!
 DOOF! - is  an innovative recipes application that allows users  to create, save and share meeting the needs of keeping track of awesome food recipes.
