@@ -1,13 +1,11 @@
 import unittest
  
-from project import app
+from app import app
  
  
-class ProjectTests(unittest.TestCase):
+class UserTests(unittest.TestCase):
  
-    ############################
-    #### setup and teardown ####
-    ############################
+    
  
     # executed prior to each test
     def setUp(self):
@@ -22,12 +20,10 @@ class ProjectTests(unittest.TestCase):
         pass
  
  
-    ###############
-    #### tests ####
-    ###############
+
  
   
-
+    # Ensure that the user is able to register
     def test_user_registeration(self):
         pass
  
