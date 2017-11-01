@@ -3,4 +3,4 @@ from flask import render_template
  
 @app.route('/')
 def index():
-    pass
+    return render_template("index.html")
