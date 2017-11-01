@@ -24,8 +24,14 @@ class UserTests(unittest.TestCase):
  
   
     # Ensure that the user is able to register
-    def test_user_registeration(self):
+    def test_registration_page(self):
         pass
+
+    # Ensure that the login page loads correctly
+    def test_login_page(self):
+        pass    
+
+
  
  
 if __name__ == "__main__":
