@@ -29,7 +29,8 @@ class UserTests(unittest.TestCase):
 
     # Ensure that the login page loads correctly
     def test_login_page(self):
-        pass    
+        response = self.app.get('/login', follow_redirects=True)
+        self.assertIn(b'Sign up', response.data)   
 
 
  
