@@ -5,6 +5,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/81c0b1784a2851458604/test_coverage)](https://codeclimate.com/github/Sebuliba-Adrian/DOOF/test_coverage)
 
 [![Coverage Status](https://coveralls.io/repos/github/Sebuliba-Adrian/DOOF/badge.svg?branch=master)](https://coveralls.io/github/Sebuliba-Adrian/DOOF?branch=master)
+[![Codeship](https://img.shields.io/codeship/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1/master.svg)](https://app.codeship.com/projects/254113)
 
 # DOOF!
 DOOF! - is  an innovative recipes application that allows users  to create, save and share meeting the needs of keeping track of awesome food recipes.
