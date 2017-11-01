@@ -14,7 +14,7 @@ DOOF! - is  an innovative recipes application that allows users  to create, save
 
 # Andela-SLC-5
 
-Doof! A Recipes Web Application
+Doof!- A Recipes Web Application
 
 # A Recipes Web Application
 
