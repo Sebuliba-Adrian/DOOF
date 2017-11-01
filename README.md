@@ -59,9 +59,9 @@ $ pip install -r requirements.txt
 
 To Run The App:
 
-python run.py
+python manage.py runserver
 
-Next Navigate to http://localhost:5000/ int you favourite browser 
+Next Navigate to http://localhost:5000/ in you favourite browser 
 
 
 ## Running the tests
