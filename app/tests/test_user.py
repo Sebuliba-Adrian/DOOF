@@ -14,3 +14,10 @@ class UserTest(unittest.TestCase):
 
     def test_add_category_blank_input(self):
         self.assertEqual(self.user.add_category(" "), "Blank input")
+
+    def test_add_category_should_be_between10and60(self):
+        self.assertEqual(self.user.add_category("shortname"),
+                         "category name should be greater than 10 and less than 60 characters")
+
+        self.assertEqual(self.user.add_category("long name long name long name long name long name long name long name"),
+                         "category name should be greater than 10 and less than 60 characters")
