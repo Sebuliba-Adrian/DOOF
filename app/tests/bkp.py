@@ -1,33 +1,31 @@
 """ This module tests all functions in the utilites.py file """
 import unittest
-from app.utilities import register, login
-from app.models import User
-from app.models import Data
+from app.utilities import register
 
 
-class TestUTilityFunctions(unittest.TestCase):
+class TestUTilityFunctions(unittest.TestCase): 
     """ This class tests methods of the views module """
-
     def setUp(self):
-        self.name = "Adri Morg"
-        self.correct_username = "adri.morg"
-        self.short_username = "adr"
-        self.long_username = "adrianmorgangreg"
-        self.invalid_chars_username = "adris@morg"
+        self.name = "Eric Elem"
+        self.correct_username = "eric.elem"
+        self.short_username = "eri"
+        self.long_username = "ericnelsonelem"
+        self.invalid_chars_username = "eric@elem"
         self.correct_password = "password"
         self.short_pass = "pass"
         self.long_pass = "passwordpassword"
 
-    def test_none_inpts(self):
+    def test_utilities(self):
         """ Tests the register utilites functions against various inputs """
         self.assertEqual(register(None, None, None, None), "None input")
+        """Ensure that credentials are not blank"""
 
     def test_blank_credentials(self):
-        """Ensure that credentials are not blank"""
+        """Ensure that user name is between 4 and 10 characters"""
         self.assertEqual(register("  ", " ", "  ", " "), "Blank input")
 
     def test_username_length_4_10(self):
-        """Ensure that password characters are btn 4 and 10 """
+        """Enure that password characters are btn 6 and 10 """
         self.assertEqual(register(self.name, self.short_username,
                                   self.correct_password, self.correct_password),
                          "Username should be 4 to 10 characters")
@@ -36,8 +34,7 @@ class TestUTilityFunctions(unittest.TestCase):
                          "Username should be 4 to 10 characters")
 
     def test_password_length_6_10(self):
-        """Ensure that password characters are btn 6 and 10 """
-        
+        """Ensure that all username characters are illegal is not allowed"""
         self.assertEqual(register(self.name, self.correct_username, self.short_pass,
                                   self.short_pass),
                          "Password should be 6 to 10 characters")
@@ -45,8 +42,8 @@ class TestUTilityFunctions(unittest.TestCase):
                                   self.long_pass),
                          "Password should be 6 to 10 characters")
 
-    def test_llegal_username_characters(self):
-        """Ensure that illegal characters in username are not allowed"""
+    def test_illegal_username_characters(self):
+        """Ensure that illegal characters are not allowed"""
 
         self.assertEqual(register(self.name, self.invalid_chars_username, self.correct_password,
                                   self.correct_password),
@@ -65,29 +62,10 @@ class TestUTilityFunctions(unittest.TestCase):
                          "Registration successful")
 
 
-    def test_login_none(self):
-        """ Tests the login function of the utilities module for None in put """
-        self.assertEqual(login(None, None), "None input")
 
-    def test_login_blank(self):
-        """ Tests the login function of the utilities module for blank input """
-        self.assertEqual(login(" ", " "), "Blank input")
 
-    def test_login_unknown(self):
-        """ Tests the login function of the utilities module for unknown user """
-        self.assertEqual(login("unknownuser", "unknownpass"), "User not found")
-        Data.USERS[self.correct_username] = User(self.name, self.correct_username,
-                                            self.correct_password)
 
-    def test_login_wrongpass(self):
-        """ Tests the login function of the utilities module for wrong password """
-        self.assertEqual(login(self.correct_username, "wrongpass"), "Wrong password")
 
-    def test_login_success(self):
-        """ Tests the login funtion of the utilites module for incorrect password """
-        register(self.name, self.correct_username, self.correct_password,
-                 self.correct_password)
-        self.assertEqual(login(self.correct_username, self.correct_password), "Login successful")                     
 
 
 if __name__ == '__main__':
