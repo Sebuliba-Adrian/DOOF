@@ -25,8 +25,10 @@ class AppTests(unittest.TestCase):
     # tests
     def test_landing_page(self):
         response = self.app.get('/', follow_redirects=True)
-        self.assertIn(b'Welcome to Doof!-an awesome Recipe Application', response.data)
-        self.assertIn(b'Learn more', response.data)
+        self.assertIn(b'DOOF Recipes App', response.data)
+        self.assertIn(b'Sign in', response.data)
+        self.assertIn(b'Sign up', response.data)
+      
     
 
 
