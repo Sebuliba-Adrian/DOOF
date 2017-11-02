@@ -9,3 +9,7 @@ class UserTest(unittest.TestCase):
         self.assertIsInstance(self.user, User, 'User not created')
 
     
+    def test_add_category_None(self):
+         self.assertEqual(self.user.add_category(None), "None input")
+
+    
