@@ -1,8 +1,8 @@
 """ This module contains all the helper functions for the recipes app"""
 import re
-from app import USERS
-from models import User
 
+from models import User
+from models import Data
 
 def register(name, username, password, rpt_password):
     """ This function handles user registration"""
@@ -12,7 +12,7 @@ def register(name, username, password, rpt_password):
                 if re.match("^[a-zA-Z0-9_.-]+$", username):
                     if len(password) > 5 and len(password) < 11:
                         if password == rpt_password:
-                            USERS[username] = User(name, username, password)
+                            Data.USERS[username] = User(name, username, password)
                             return "Registration successful"
                         return "Passwords don't match"
                     return "Password should be 6 to 10 characters"
@@ -26,8 +26,8 @@ def login(username, password):
     """ Handles user login """
     if username and password:
         if username.strip() and password.strip():
-            if USERS.get(username):
-                if USERS[username].password == password:
+            if Data.USERS.get(username):
+                if Data.USERS[username].password == password:
                     return "Login successful"
                 return "Wrong password"
             return "User not found"
