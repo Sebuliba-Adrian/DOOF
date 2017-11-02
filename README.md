@@ -66,7 +66,9 @@ Next Navigate to http://localhost:5000/ in you favourite browser
 
 ## Running the tests
 $(.venv) green
+
 or
+
 $(.venv) nose2
 
 
