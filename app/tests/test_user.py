@@ -1,5 +1,7 @@
 import unittest
 from app.user import User
+from app.category import Category
+
 
 class UserTest(unittest.TestCase):
     def setUp(self):
@@ -21,3 +23,8 @@ class UserTest(unittest.TestCase):
 
         self.assertEqual(self.user.add_category("long name long name long name long name long name long name long name"),
                          "category name should be greater than 10 and less than 60 characters")
+
+    def test_add_category_added(self):
+        self.assertEqual(self.user.add_category("Appetizers"),
+                         "category added")
+                     
