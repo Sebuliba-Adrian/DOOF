@@ -10,7 +10,7 @@
 
 # DOOF!
 DOOF! - is  an innovative recipes application that allows users  to create, save and share meeting the needs of keeping track of awesome food recipes.
-## Check Doof! out in statuc action the link: http://sebuliba-adrian.github.io/
+## Check Doof! out in static action the link: http://sebuliba-adrian.github.io/
 
 # Andela-SLC-5
 
