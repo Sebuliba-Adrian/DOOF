@@ -28,3 +28,8 @@ class UserTest(unittest.TestCase):
         self.assertEqual(self.user.add_category("Appetizers"),
                          "category added")
                      
+    def test_add_category_name_already_exists(self):
+        self.user.add_category("Appetizers")
+        self.assertEqual(self.user.add_category
+                         ("Appetizers"),
+                         "An category with this name already exists")
