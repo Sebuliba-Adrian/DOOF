@@ -12,4 +12,5 @@ class UserTest(unittest.TestCase):
     def test_add_category_None(self):
          self.assertEqual(self.user.add_category(None), "None input")
 
-    
+    def test_add_category_blank_input(self):
+        self.assertEqual(self.user.add_category(" "), "Blank input")
