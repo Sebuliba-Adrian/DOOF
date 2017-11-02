@@ -1,8 +1,8 @@
 """ This module contains all the helper functions for the recipes app"""
 import re
 
-from models import User
-from models import Data
+from app.models import User
+from app.models import Data
 
 def register(name, username, password, rpt_password):
     """ This function handles user registration"""
