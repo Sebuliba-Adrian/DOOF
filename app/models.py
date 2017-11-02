@@ -8,7 +8,7 @@ class User:
         self.name = name
         self.username = username
         self.password = password
-        self.buckets = {}
+        self.categories = {}
 
 class Recipe(object):
 
