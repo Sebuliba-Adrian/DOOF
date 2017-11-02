@@ -1,3 +1,15 @@
+
+
+""" Contains the various object models used by the recipe app """
+class User:
+    """ Describes the user model """
+
+    def __init__(self, name, username, password):
+        self.name = name
+        self.username = username
+        self.password = password
+        self.buckets = {}
+
 class Recipe(object):
 
     def __init__(self, title, description):
@@ -6,3 +18,10 @@ class Recipe(object):
 
     def __repr__(self):
         return '<title {}'.format(self.recipe_title)
+
+class Data(object):
+    USERS ={}
+
+ 
+
+        
