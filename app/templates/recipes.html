@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doof!</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="../images/favicon.ico" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    Doof Recipes App
+                </a>                
+            </div>
+            <a class="navbar-text navbar-right logout" href="/logout">
+                    Logout
+                </a>
+        </div>
+    </nav>
+    <div class="list-group list">
+        <a href="#" class="list-group-item active"><b>{{category}}</b></a>
+        
+            {% if recipe!=None %}    
+            <form method="POST" action="/recipes/{{category}}/{{recipe}}">
+            <div class="list-group-item">   
+            <input type="text" name="recipename" class="form-control list-add-row" value="{{recipe}}" required/>
+            <select class="btn btn-default" name="status">
+                {% if recipes[recipe].status=='P' %}
+                <option value="Pending" selected>Pending</option>
+                <option value="Done">Done</option>
+                {% else %}
+                <option value="Pending">Public</option>
+                <option value="Done" selected>Done</option>
+                {% endif %}
+            </select>
+
+            <input type="submit" class="btn btn-default" name="submit" value="Save"/>
+            {% else %}
+            <form method="POST" action="/recipes/{{category}}">
+            <div class="list-group-item">
+            <input type="text" name="recipename" class="form-control list-add-row" placeholder="Enter recipe name here and click the add action on the right to add it to this Category" required/>
+            <input type="submit" class="btn btn-default" name="submit" value="Add" />
+            {% endif %}
+            </div></form>
+       
+       {% if recipes!=None %}
+       {% for key, value in recipes.iteritems() %}
+       {% if value.status=='Pending'%}
+       <div class="list-group-item">                   
+            <a href="/recipes/{{category}}/{{key}}/delete"><span class="glyphicon glyphicon-trash item-action" aria-hidden="true"> </span></a>
+            <a href="/recipes/{{category}}/{{key}}/edit"><span class="glyphicon glyphicon-pencil item-action" aria-hidden="true"> </span></a>            
+            <a href="#" class="">{{key}}</a>
+       </div>
+       {% else %}
+       <div class="list-group-item list-group-item-success">                   
+            <a href="/recipes/{{category}}/{{key}}/delete"><span class="glyphicon glyphicon-trash item-action" aria-hidden="true"> </span></a>
+            <a href="/recipes/{{category}}/{{key}}/edit"><span class="glyphicon glyphicon-pencil item-action" aria-hidden="true"> </span></a>            
+            <a href="#" class="">{{key}}</a>
+       </div>
+       {% endif %}
+        {% endfor %}
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

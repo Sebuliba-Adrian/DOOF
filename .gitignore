@@ -8,7 +8,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-venv/
 build/
 develop-eggs/
 dist/
@@ -55,6 +54,7 @@ coverage.xml
 local_settings.py
 
 # Flask stuff:
+instance/
 .webassets-cache
 
 # Scrapy stuff:
@@ -78,11 +78,10 @@ celerybeat-schedule
 # SageMath parsed files
 *.sage.py
 
-# dotenv
+# Environments
 .env
-
-# virtualenv
 .venv
+env/
 venv/
 ENV/
 
