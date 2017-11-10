@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b0b362f1d90445cebc53ae7b1cd935e1)](https://www.codacy.com/app/Sebuliba-Adrian/DOOF?utm_source=github.com&utm_medium=referral&utm_content=Sebuliba-Adrian/DOOF&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/Sebuliba-Adrian/DOOF.svg?branch=master)](https://travis-ci.org/Sebuliba-Adrian/DOOF)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/81c0b1784a2851458604/maintainability)](https://codeclimate.com/github/Sebuliba-Adrian/DOOF/maintainability)
