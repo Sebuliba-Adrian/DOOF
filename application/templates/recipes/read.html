@@ -1,0 +1,33 @@
+{% extends 'lists.html' %}
+{% block heading %} 
+    <div>
+        <a href="/read_categories" class="btn btn-warning ">MY RECIPES</a>
+        <a class="text-muted"> - {{ session['active_catergory_title'] }}</a>
+    </div>    
+    <a href="{{ url_for('create_recipe') }}" class="btn btn-success ">Add recipe</a>                
+{% endblock %}
+{% block list %}
+    {% block form %}
+
+    {% endblock %}
+    {% if recipes %}
+        {% for name, recipe in recipes.items() %}
+            {% if recipe.status=="Done" %}
+                <div class="list-group-item list-group-item-success list-group-item-action flex-column align-recipes-start">
+            {% else %}
+                <div class="list-group-item list-group-item-action flex-column align-recipes-start">
+            {% endif %}
+                <div class="d-flex w-100 justify-content-between">
+                   <a href="/load_details" class="mb-1">{{ name }}<h6></a>
+                    <div>
+                        <a href="{{ url_for('update_recipe',description=name) }}" class="btn btn-warning"><span class="fa fa-pencil-square-o" ></span></a>
+                        <a href="{{ url_for('delete_recipe',description=name) }}" class="btn btn-danger"><span class="fa fa-trash "></span></a>
+                    </div>
+                </div>
+                
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="list-group-item">Add Recipes. They will be displayed here.</div>
+    {% endif %} 
+{% endblock %}   

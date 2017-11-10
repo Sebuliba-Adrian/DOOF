@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="row" style="margin-top:100px;">
+        <div class="col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+            <div class="card mt-5 border-0">
+                <div class="card-block bg-danger">
+                    <h3 class="text-white text-center">DOOF!-RECIPES</h3>
+                </div>
+                <div class="card" style="box-shadow:0 4px 8px 0 rgba(0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.19)">
+                    <ul class="nav nav-tabs">
+                        {% if "/sign_in" in request.path %}
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/sign_in">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/sign_up">Sign up</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/sign_in">Sign in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/sign_up">Sign up</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="card-block">   
+                    {% include 'includes/_messages.html' %}                 
+                    {% block form %}
+                    
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}

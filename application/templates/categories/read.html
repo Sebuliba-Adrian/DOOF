@@ -1,0 +1,26 @@
+{% extends 'lists.html' %}
+{% block heading %} 
+    <a class="text-muted">MY CATEGORIES</a>
+    <a href="{{ url_for('create_category') }}" class= "btn btn-success" >Add category</a>                
+{% endblock %}
+{% block list %}
+    {% block form %}
+
+    {% endblock %}
+    {% if categories %}
+        {% for name, category in categories.items() %}
+            <div class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                    <a href="{{ url_for('read_recipes',category_title=name) }}" class="text-muted"><h6 class="mb-1">{{ name }}</h6></a>
+                    <div>
+                        <a href="{{ url_for('update_category',title=name) }}" class="btn btn-warning"><span class="fa fa-pencil-square-o"></span></a>
+                        <a href="{{ url_for('delete_category',title=name) }}" class="btn btn-danger"><span class="fa fa-trash"></span></a>
+                    </div>
+                </div>
+                <small>Recipes Count: {{ category.get_recipes_count() }}</small>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="list-group-item">Add categories. They will be displayed here.</div>
+    {% endif %} 
+{% endblock %}   
